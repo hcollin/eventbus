@@ -9,7 +9,7 @@ export default defineConfig({
         lib: {
             entry: 'src/main.ts',
             name: packageName,
-            fileName: (format) => `hceventbus.${format}.js`,
+            fileName: (format) => `index.${format}.js`,
             formats: ['es', 'cjs']
         },
         rollupOptions: {
