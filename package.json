@@ -1,0 +1,24 @@
+{
+  "name": "eventbus",
+  "description": "Event Bus library using either internal observer pattern or browser's native EventTarget",
+  "author": {
+    "name": "Henrik Collin"
+  },
+  "private": true,
+  "version": "0.5.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "happy-dom": "^15.7.4",
+    "husky": "^9.1.6",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.9",
+    "vitest": "^2.1.4"
+  }
+}
