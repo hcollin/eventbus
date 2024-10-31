@@ -11,6 +11,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
+    "test-husky": "vitest --watch=false",
     "preview": "vite preview",
     "prepare": "husky"
   },
