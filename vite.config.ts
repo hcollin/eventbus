@@ -14,7 +14,7 @@ export default defineConfig({
         lib: {
             entry: 'src/main.ts',
             name: packageName,
-            fileName: (format) => `index.${format}.js`,
+            fileName: "index",
             formats: ['es', 'cjs']
         },
         rollupOptions: {
