@@ -1,12 +1,27 @@
 {
-  "name": "eventbus",
+  "name": "hceventbus",
   "description": "Event Bus library using either internal observer pattern or browser's native EventTarget",
   "author": {
-    "name": "Henrik Collin"
+    "name": "Henrik Collin",
+    "email": "hcollin78@gmail.com",
+    "url": "https://github.com/hcollin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hcollin/eventbus"
   },
   "private": true,
   "version": "0.5.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
