@@ -11,10 +11,11 @@
     "url": "https://github.com/hcollin/eventbus"
   },
   "private": false,
-  "version": "0.5.0",
+  "version": "0.5.0-alpha.5",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -37,6 +38,7 @@
     "husky": "^9.1.6",
     "typescript": "~5.6.2",
     "vite": "^5.4.9",
+    "vite-plugin-dts": "^4.3.0",
     "vitest": "^2.1.4"
   }
 }
