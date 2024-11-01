@@ -1,8 +1,10 @@
 import { describe, expect, test } from "vitest";
 import { createEventBus } from "./eventbus";
 import { LOGLEVEL } from "./types/LogLevels.enum";
+import { Callback, EventBus, EventBusOptions } from "./main";
 
 describe("EventBus Test Suite", () => {
+    
     test("EventBus: Check default state", () => {
         const bus = createEventBus({});
 
@@ -24,6 +26,20 @@ describe("EventBus Test Suite", () => {
         expect(bus.stats().broadcasts).toBe(0);
         expect(bus.stats().on).toBe(0);
         expect(bus.stats().sends).toBe(0);
+    });
+
+    test("EventBus: Check that the event bus exports types", () => {
+        expect(typeof ({} as EventBus)).toBe("object");  
+        expect(typeof ({} as EventBusOptions)).toBe("object");
+        
+        
+        expect(typeof (((_data: any) => {}) as Callback)).toBe("function");
+
+        expect(typeof LOGLEVEL).toBe("object");
+        expect(LOGLEVEL.DEBUG).toBe(0);
+        expect(LOGLEVEL.INFO).toBe(1);
+        expect(LOGLEVEL.WARN).toBe(2);
+        expect(LOGLEVEL.ERROR).toBe(3);
     });
 
     test("EventBus: Check that the event bus only accepts valid types", () => {
